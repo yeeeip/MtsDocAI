@@ -1,19 +1,28 @@
-/* messageList.module.css */
-
 .messageList {
   flex-grow: 1;
   overflow-y: auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .message {
   max-width: 70%;
   padding: 10px;
   margin: 10px 0;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 20px;
+  font-size: 20px;
   word-wrap: break-word;
-  background-color: grey;
-  color: black;
 }
 
+.botMessage {
+  align-self: flex-end; /* Align bot messages to the right */
+  background-color: var(--botMessageBg, #e0e0e0);
+  color: var(--botMessageText, #000);
+}
+
+.userMessage {
+  align-self: flex-start; /* Align user messages to the left */
+  background-color: var(--userMessageBg, #5d57c9);
+  color: var(--userMessageText, #fff);
+}
