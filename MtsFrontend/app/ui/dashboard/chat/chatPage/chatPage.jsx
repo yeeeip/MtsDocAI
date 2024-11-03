@@ -8,14 +8,13 @@ import styles from './chatPage.module.css';
 const ChatPage = () => {
   const [messages, setMessages] = useState([
     { text: 'Hello! How can I help you?', sender: 'bot' },
-    { text: 'Hi! I need some assistance.', sender: 'user' }
   ]);
 
   const handleSendMessage = async (message) => {
     setMessages([...messages, { text: message, sender: 'user' }]);
 
     try {
-      const response = await fetch('/api/chat/message', {
+      const response = await fetch('http://mts-backend:8080/api/v1/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
