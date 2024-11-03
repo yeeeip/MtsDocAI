@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/ask")
-@CrossOrigin("*")
+@CrossOrigin
 public class RagController {
 
     private final PdfDocService pdfDocService;

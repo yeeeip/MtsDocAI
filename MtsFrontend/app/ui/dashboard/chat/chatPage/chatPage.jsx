@@ -14,7 +14,7 @@ const ChatPage = () => {
     setMessages([...messages, { text: message, sender: 'user' }]);
 
     try {
-      const response = await fetch('http://mts-backend:8080/api/v1/ask', {
+      const response = await fetch('http://backend:8080/api/v1/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
