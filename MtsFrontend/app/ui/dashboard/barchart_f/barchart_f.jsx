@@ -17,7 +17,7 @@ const Barchart_f = () => {
   const [selectedAp, setSelectedAp] = useState([]); 
 
   useEffect(() => {
-    fetch('/data.json')
+    fetch('/data_full.json')
       .then((response) => response.json())
       .then((jsonData) => {
         // Sort the initial data by end_year in ascending order
