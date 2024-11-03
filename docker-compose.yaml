@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  pg-vector:
+    image: pgvector/pgvector:pg16
+    container_name: pgvector-db
+    environment:
+      POSTGRES_DB: ${PG_DB}
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+    ports:
+      - "5433:5432"
+    networks:
+      mts-net:
+  backend:
+    image: backend-image:v1
+    container_name: mts-backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://${PG_HOST}/${PG_DB}
+      SPRING_DATASOURCE_USERNAME: ${PG_USER}
+      SPRING_DATASOURCE_PASSWORD: ${PG_PASSWORD}
+      EMBEDDER_URI: ${EMBEDDER_URI}
+      LLAMA_URI: ${LLAMA_URI}
+    ports:
+      - '8080:8080'
+    depends_on:
+      - pg-vector
+    networks:
+      mts-net:
+  frontend:
+    container_name: mts-frontend
+    build:
+      context: ./MtsFrontend
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+    networks:
+      mts-net:
+networks:
+  mts-net:
+    driver: bridge

@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${PG_HOST}/${PG_DB}
+    username: ${PG_USER}
+    password: ${PG_PASSWORD}
+  sql:
+    init:
+      mode: always
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+embedder:
+  root-uri: ${EMBEDDER_URI}
+llama:
+  root-uri: ${LLAMA_URI}
