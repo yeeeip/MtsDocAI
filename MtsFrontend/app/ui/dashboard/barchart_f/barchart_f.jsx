@@ -72,11 +72,9 @@ const Barchart_f = () => {
   return (
     <div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-      {/* <img src={myImage} alt="MTS DOCS" style={{ width: '5%', height: 'auto' }} /> */}
 
-      <h1 style={{ marginRight: '10px' }}>MTS DOCS</h1>
     </div>  
-        <h1>Данные с накоплением</h1>
+        <h1 className='h1name'>Данные с накоплением</h1 >
       <div className='container'>
       <Select
           options={categories.map(cat => ({ label: cat, value: cat }))}
@@ -97,7 +95,7 @@ const Barchart_f = () => {
           isMulti
         />
         <div>
-          <label>
+          <label className='checkBox'>
             <input
               type="checkbox"
               value="Актив"
@@ -106,7 +104,7 @@ const Barchart_f = () => {
             />
             Актив
           </label>
-          <label>
+          <label className='checkBox'>
             <input
               type="checkbox"
               value="Пассив"

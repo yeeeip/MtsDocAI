@@ -19,8 +19,8 @@
   background-color: var(--buttonBg, #5d57c9);
   color: white;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 20px 150px;
+  border-radius: 50px;
   cursor: pointer;
   margin-left: 10px;
 }
