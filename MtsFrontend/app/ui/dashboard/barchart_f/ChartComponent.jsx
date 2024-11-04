@@ -51,10 +51,12 @@ const ChartComponent = ({ filteredData }) => {
           responsive: true,
           plugins: {
             legend: { position: 'left' },
-            title: { display: true, text: 'График с накоплением' ,font: {
-              size: 24, // Adjust the font size as needed
-              weight: 'bold', // Optional: make the font bold
-            },},
+            title: { display: true, text: 'График с накоплением' ,
+              font: {
+                size: 24, // Adjust the font size as needed
+                weight: 'bold', // Optional: make the font bold
+              },
+            },
           
           },
           scales: {
