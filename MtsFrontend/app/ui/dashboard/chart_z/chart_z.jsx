@@ -1,6 +1,6 @@
 "use client"
 
-import styles from './chart.module.css'
+import styles from './chart_z.module.css'
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -70,10 +70,10 @@ const data = [
   }
 ];
 
-const Chart = () => {
+const Chart_z = () => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Прибыль (млрд. руб)</h2>
+      <h2 className={styles.title}>Прибыль (млрд.руб)</h2>
       <ResponsiveContainer width="100%" height="90%">
         <LineChart
           width={500}
@@ -90,9 +90,8 @@ const Chart = () => {
           <YAxis />
           <Tooltip contentStyle={{background:"#151c2c", border:"none"}}/>
           <Legend />
-          <Line type="monotone" dataKey="Валовая" stroke="#8884d8" strokeDasharray="5 5" />
-          <Line type="monotone" dataKey="От продаж" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
-          <Line type="monotone" dataKey="Чистая" stroke="#ef4dbf" strokeDasharray="5 8 5" />
+          <Line type="monotone" dataKey="Коммерческие" stroke="#8884d8" strokeDasharray="5 5" />
+          <Line type="monotone" dataKey="Управленческие" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
 
         </LineChart>
       </ResponsiveContainer>
@@ -100,4 +99,4 @@ const Chart = () => {
   )
 }
 
-export default Chart
+export default Chart_z

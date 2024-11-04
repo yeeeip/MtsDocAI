@@ -14,16 +14,16 @@ const ChatPage = () => {
     setMessages([...messages, { text: message, sender: 'user' }]);
 
     try {
-      const response = await fetch('http://mts-backend:8080/api/v1/ask', {
+      const response = await fetch('http://localhost:8080/api/v1/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(message),
+        body: JSON.stringify({text: message}),
       });
 
       if (response.ok) {
-        const botMessage = await response.text(); // Предположим, что ответ - это простой текст
+        const botMessage = await response.text();
         setMessages(prevMessages => [
           ...prevMessages,
           { text: botMessage, sender: 'bot' }

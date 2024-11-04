@@ -65,9 +65,6 @@ const App = () => {
   return (
     <div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-      <img src={myImage} alt="MTS DOCS" style={{ width: '5%', height: 'auto' }} />
-
-      <h1 style={{ marginRight: '10px' }}>MTS DOCS</h1>
     </div>  
         <h1>Данные с накоплением</h1>
       <div className='container'>

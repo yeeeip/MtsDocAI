@@ -74,5 +74,13 @@ F
 MtsFrontend/app/App.js,e\5\e5f27144ed75f5d55dbd65ac559183a2e29d64a7
 g
 7MtsFrontend/app/ui/dashboard/chat/chatPage/chatPage.jsx,b\0\b0e0be73bb089a725a49a5ee93f18ec18c1ca0a7
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+M
+MtsFrontend/package-lock.json,6\4\6463ecc99bec74180d06a16c29ab1927ef1babff
+g
+7MtsFrontend/app/ui/dashboard/chat/inputBox/inputBox.jsx,5\a\5a4200ff504874bcb5dee74bb5125842e272a8f3
+t
+DPdfProdcessingService/src/main/java/org/nuzhd/config/CorsConfig.java,c\c\cc0d843608c6157e51e71de0cfb80a83878ad099
+n
+>MtsFrontend/app/ui/dashboard/chat/chatPage/chatPage.module.css,5\2\528122ed069d3d1291bc3a6a42cd88470a64fe50
+4
+.env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
