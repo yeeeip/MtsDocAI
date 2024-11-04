@@ -73,7 +73,7 @@ const data = [
 const Chart_z = () => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Прибыль (млрд.руб)</h2>
+      <h2 className={styles.title}>Затраты (млрд.руб)</h2>
       <ResponsiveContainer width="100%" height="90%">
         <LineChart
           width={500}

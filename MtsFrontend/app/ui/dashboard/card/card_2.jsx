@@ -6,10 +6,10 @@ const Card = () => {
     <div className={styles.container}>
       <MdSupervisedUserCircle size={24} />
       <div className={styles.texts}>
-        <span className={styles.title}>Выручка. 2024г. (млрд.руб)</span>
-        <span className={styles.number}>332.2</span>
+        <span className={styles.title}>Рентабельность по OIBDA (2024)</span>
+        <span className={styles.number}>37.5%</span>
         <span className={styles.detail}>
-          <span className={styles.positive}>17.9%</span>
+          <span className={styles.negative}>-11.1%</span>
         </span>
       </div>
     </div>

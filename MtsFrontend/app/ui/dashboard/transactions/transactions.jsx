@@ -1,102 +1,98 @@
-import Image from "next/image";
 import styles from "./transactions.module.css";
+
+const data = [
+  {
+    "Год": 2009,
+    "Валовая": 111.213691,
+    "От продаж": 66.657912,
+    "Чистая": 33.480015,
+    "Коммерческие": 25.121442,
+    "Управленческие": 19.434337
+  },
+  {
+    "Год": 2010,
+    "Валовая": 118.167565,
+    "От продаж": 65.945486,
+    "Чистая": 27.428577,
+    "Коммерческие": 33.089665,
+    "Управленческие": 19.132414
+  },
+  {
+    "Год": 2011,
+    "Валовая": 122.456796,
+    "От продаж": 64.595493,
+    "Чистая": 54.129288,
+    "Коммерческие": 36.569705,
+    "Управленческие": 21.300598
+  },
+  {
+    "Год": 2012,
+    "Валовая": 127.934453,
+    "От продаж": 70.190971,
+    "Чистая": 42.949463,
+    "Коммерческие": 33.241387,
+    "Управленческие": 24.502095
+  },
+  {
+    "Год": 2013,
+    "Валовая": 145.256787,
+    "От продаж": 73.478290,
+    "Чистая": 55.999090,
+    "Коммерческие": 44.177545,
+    "Управленческие": 27.609952
+  },
+  {
+    "Год": 2014,
+    "Валовая": 150.368668,
+    "От продаж": 74.377911,
+    "Чистая": 28.372745,
+    "Коммерческие": 47.474858,
+    "Управленческие": 28.515899
+  },
+  {
+    "Год": 2015,
+    "Валовая": 148.330805,
+    "От продаж": 72.827733,
+    "Чистая": 6.590503,
+    "Коммерческие": 46.845936,
+    "Управленческие": 28.657136
+  },
+  {
+    "Год": 2016,
+    "Валовая": 148.855198,
+    "От продаж": 70.778305,
+    "Чистая": 50.658752,
+    "Коммерческие": 48.182276,
+    "Управленческие": 29.894617
+  }
+];
 
 const Transactions = () => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Latest Transactions</h2>
+      <h2 className={styles.title}>Данные по Годам</h2>
       <table className={styles.table}>
         <thead>
           <tr>
-            <td>Name</td>
-            <td>Status</td>
-            <td>Date</td>
-            <td>Amount</td>
+            <th>Год</th>
+            <th>Валовая прибыль</th>
+            <th>Прибыль от продаж</th>
+            <th>Чистая прибыль</th>
+            <th>Коммерческие затраты</th>
+            <th>Управленческие затраты</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <div className={styles.user}>
-                <Image
-                  src="/noavatar.png"
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={styles.userImage}
-                />
-                John Doe
-              </div>
-            </td>
-            <td>
-              <span className={`${styles.status} ${styles.pending}`}>
-                Pending
-              </span>
-            </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
-          </tr>
-          <tr>
-            <td>
-              <div className={styles.user}>
-                <Image
-                  src="/noavatar.png"
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={styles.userImage}
-                />
-                John Doe
-              </div>
-            </td>
-            <td>
-              <span className={`${styles.status} ${styles.done}`}>Done</span>
-            </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
-          </tr>
-          <tr>
-            <td>
-              <div className={styles.user}>
-                <Image
-                  src="/noavatar.png"
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={styles.userImage}
-                />
-                John Doe
-              </div>
-            </td>
-            <td>
-              <span className={`${styles.status} ${styles.cancelled}`}>
-                Cancelled
-              </span>
-            </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
-          </tr>
-          <tr>
-            <td>
-              <div className={styles.user}>
-                <Image
-                  src="/noavatar.png"
-                  alt=""
-                  width={40}
-                  height={40}
-                  className={styles.userImage}
-                />
-                John Doe
-              </div>
-            </td>
-            <td>
-              <span className={`${styles.status} ${styles.pending}`}>
-                Pending
-              </span>
-            </td>
-            <td>14.02.2024</td>
-            <td>$3.200</td>
-          </tr>
+          {data.map((row, index) => (
+            <tr key={index}>
+              <td>{row["Год"]}</td>
+              <td>{row["Валовая"]}</td>
+              <td>{row["От продаж"]}</td>
+              <td>{row["Чистая"]}</td>
+              <td>{row["Коммерческие"]}</td>
+              <td>{row["Управленческие"]}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
