@@ -74,3 +74,5 @@ F
 MtsFrontend/app/App.js,e\5\e5f27144ed75f5d55dbd65ac559183a2e29d64a7
 g
 7MtsFrontend/app/ui/dashboard/chat/chatPage/chatPage.jsx,b\0\b0e0be73bb089a725a49a5ee93f18ec18c1ca0a7
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
