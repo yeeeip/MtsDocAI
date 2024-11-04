@@ -16,13 +16,13 @@
 }
 
 .botMessage {
-  align-self: flex-end; /* Align bot messages to the right */
+  align-self: flex-start; /* Align bot messages to the right */
   background-color: var(--botMessageBg, #e0e0e0);
   color: var(--botMessageText, #000);
 }
 
 .userMessage {
-  align-self: flex-start; /* Align user messages to the left */
+  align-self: flex-end; /* Align user messages to the left */
   background-color: var(--userMessageBg, #5d57c9);
   color: var(--userMessageText, #fff);
 }

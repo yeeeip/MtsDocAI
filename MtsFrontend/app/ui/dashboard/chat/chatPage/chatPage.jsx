@@ -7,7 +7,7 @@ import styles from './chatPage.module.css';
 
 const ChatPage = () => {
   const [messages, setMessages] = useState([
-    { text: 'Hello! How can I help you?', sender: 'bot' },
+    { text: 'Привет! Чем могу помочь?', sender: 'bot' },
   ]);
 
   const handleSendMessage = async (message) => {
