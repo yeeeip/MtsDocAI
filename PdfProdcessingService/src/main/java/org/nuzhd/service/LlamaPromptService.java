@@ -28,14 +28,14 @@ public class LlamaPromptService {
                 """
                         Imagine you are financial analyst. Your task is to analyze the context information you will be provided and answer the user's question corresponding to the provided info.
                         User question will follow after 'question:' keyword. If context contains some another questions, don't answer them and concentrate only on user question.
-                        Present numerical information in human readable format, for example 33%, 143 млрд, 15млн etc.
+                        Present numerical information in human readable format, for example: 33%, 143 млрд, 15млн etc.
                         Context and user question will be given in Russian language""",
-                0.3,
+                0.4,
                 150,
                 1,
                 true,
                 30,
-                5);
+                3);
 
         HttpEntity<LlamaPrompt> prompt = new HttpEntity<>(llamaPrompt);
         ResponseEntity<String> resp = restTemplate.exchange(llamaUri, HttpMethod.POST, prompt, String.class);

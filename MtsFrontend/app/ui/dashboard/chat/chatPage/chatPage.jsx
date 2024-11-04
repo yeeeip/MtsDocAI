@@ -14,7 +14,7 @@ const ChatPage = () => {
     setMessages([...messages, { text: message, sender: 'user' }]);
 
     try {
-      const response = await fetch('http://backend:8080/api/v1/ask', {
+      const response = await fetch('http://localhost:8080/api/v1/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ const ChatPage = () => {
       });
 
       if (response.ok) {
-        const botMessage = await response.text(); // Предположим, что ответ - это простой текст
+        const botMessage = await response.text();
         setMessages(prevMessages => [
           ...prevMessages,
           { text: botMessage, sender: 'bot' }
