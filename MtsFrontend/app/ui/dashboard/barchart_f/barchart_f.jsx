@@ -74,7 +74,6 @@ const Barchart_f = () => {
         <div style={{ display: 'flex', alignItems: 'center' }}>
 
     </div>  
-        <h1 className='h1name'>Данные с накоплением</h1 >
       <div className='container'>
       <Select
           options={categories.map(cat => ({ label: cat, value: cat }))}
@@ -95,7 +94,7 @@ const Barchart_f = () => {
           isMulti
         />
         <div>
-          <label className='checkBox'>
+          <label className='checkBoxActive'>
             <input
               type="checkbox"
               value="Актив"
@@ -104,7 +103,7 @@ const Barchart_f = () => {
             />
             Актив
           </label>
-          <label className='checkBox'>
+          <label className='checkBoxPassive'>
             <input
               type="checkbox"
               value="Пассив"
@@ -115,7 +114,7 @@ const Barchart_f = () => {
           </label>
         </div>
       </div>
-      <ChartComponent filteredData={filteredData} />
+      <ChartComponent className='container2' filteredData={filteredData} />
     </div>
   );
 };

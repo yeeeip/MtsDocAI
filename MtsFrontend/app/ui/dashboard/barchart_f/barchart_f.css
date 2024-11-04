@@ -18,12 +18,20 @@ h1 {
   align-items: center;
 
 }
+
+.checkBoxActive{
+  color: beige;
+  padding: 10px;
+}
+
 /* App.css */
 .container {
+  padding: 30px;
   display: flex;
   gap: 20px;
   align-items: center;
   justify-content: center;
+  background-color: var(--bgSoft);
 }
 
 .header {

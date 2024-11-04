@@ -12,6 +12,8 @@ const interpolateColor = (value, minValue, maxValue) => {
   return `rgba(${r}, 4, ${b}, 0.8)`;
 };
 
+
+
 const ChartComponent = ({ filteredData }) => {
   // Extract unique years and types
   const years = [...new Set(filteredData.map(item => item.year))];
@@ -49,7 +51,11 @@ const ChartComponent = ({ filteredData }) => {
           responsive: true,
           plugins: {
             legend: { position: 'left' },
-            title: { display: true, text: 'График с накоплением' },
+            title: { display: true, text: 'График с накоплением' ,font: {
+              size: 24, // Adjust the font size as needed
+              weight: 'bold', // Optional: make the font bold
+            },},
+          
           },
           scales: {
             x: { stacked: true },
